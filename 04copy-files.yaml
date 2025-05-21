@@ -8,3 +8,6 @@
       copy: 
         src: /Users/Sahil/Desktop/Ansible-Playbooks
         dest: /home/ubuntu
+        owner: Paul
+        group: DevOps
+        mode: 0777
