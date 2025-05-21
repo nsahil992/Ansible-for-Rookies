@@ -1,0 +1,10 @@
+---
+
+- name: Copy files to remote
+  hosts: web
+
+  tasks:
+    - name: Copy files
+      copy: 
+        src: /Users/Sahil/Desktop/Ansible-Playbooks
+        dest: /home/ubuntu
