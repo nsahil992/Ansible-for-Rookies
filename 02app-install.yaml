@@ -1,0 +1,13 @@
+---
+
+- name: Install and start the service
+  hosts: localhost
+
+  tasks: 
+  - name: Installing Nginx
+    community.general.homebrew: 
+      name: nginx
+      state: present
+
+  - name: Start Nginx
+    shell: brew services start nginx
