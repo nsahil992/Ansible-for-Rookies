@@ -1,0 +1,12 @@
+---
+- name: First Ansible Playbook
+  hosts: localhost
+  
+  tasks: 
+  - name: Test connectivity
+    ping:
+
+  - name: "Print output"
+    debug: msg="Alright!!"
+
+     
