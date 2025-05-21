@@ -1,0 +1,21 @@
+---
+
+- name: Install Nginx on EC2
+  hosts: web
+  become: yes
+
+  tasks:
+    - name: Update update cache
+      apt:
+        update_cache: yes
+
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Start and enable nginx
+      service: 
+        name: nginx
+        state: started
+        enabled: yes
