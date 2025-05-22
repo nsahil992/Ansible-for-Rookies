@@ -1,0 +1,15 @@
+---
+
+- name: Deleting file
+  hosts: web
+
+  tasks: 
+    - name: Delete the create1.txt file
+      file:
+        path: /home/ubuntu/create1.txt
+        state: absent
+
+    - name: Delete the myfolder folder
+      file: 
+        path: /home/ubuntu/myfolder
+        state: absent
