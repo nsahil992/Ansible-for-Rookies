@@ -1,0 +1,9 @@
+---
+
+- name: Run a script
+  hosts: web
+  become: yes
+
+  tasks:
+    - name: Run script
+      script: script.sh >> test.log
