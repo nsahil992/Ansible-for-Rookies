@@ -1,0 +1,11 @@
+---
+
+- name: Change file permission
+  hosts: web
+  become: yes
+
+  tasks: 
+    - name: Change permssions of test.txt
+      file: 
+        path: /home/ubuntu/test.txt
+        mode: 0777
