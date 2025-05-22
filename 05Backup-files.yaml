@@ -1,0 +1,12 @@
+---
+
+- name: Copy and Backup files
+  hosts: web
+  become: yes
+
+  tasks:
+    - name: Copy and backup
+      copy:
+        src: /Users/Sahil/Desktop/Ansible-Playbooks/test.txt
+        dest: /home/ubuntu/
+        backup: true
