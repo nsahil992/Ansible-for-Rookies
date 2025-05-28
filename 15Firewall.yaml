@@ -6,7 +6,7 @@
   tasks: 
     - name: Enable a service in firewalldd
       firewalldd:
-        service: nginx
+        port: 80/tcp
         permanent: true
         state: enabled
 
