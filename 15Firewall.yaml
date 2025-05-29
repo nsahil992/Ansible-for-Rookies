@@ -4,8 +4,8 @@
   hosts: web
 
   tasks: 
-    - name: Enable a service in firewalldd
-      firewalldd:
+    - name: Enable a service in firewalld
+      firewalld:
         port: 80/tcp
         permanent: true
         state: enabled
