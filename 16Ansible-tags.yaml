@@ -1,0 +1,17 @@
+---
+
+- name: Creating a file
+  hosts: web
+
+  tasks:
+    - name: Create a file named create1
+      file:
+        path: /home/ubuntu/create1.txt
+        state: touchi
+      tags: c-file
+
+    - name: Creating a folder
+      file:
+        path: /home/ubuntu/myfolder
+        state: directory
+      tags: c-folder
