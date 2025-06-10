@@ -1,0 +1,15 @@
+---
+
+- name: Install and start the service
+  hosts: localhost
+  vars:
+    - app: nginx
+
+  tasks: 
+  - name: Installing Nginx
+    community.general.homebrew: 
+      name: "{{ app }}"
+      state: present
+
+  - name: Start Nginx
+    shell: brew services start nginx
